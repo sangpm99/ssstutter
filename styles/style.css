@@ -1,0 +1,264 @@
+/* CSS for all */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "Roboto", sans-serif; */
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+/* Define */
+.text-center{
+    text-align: center !important;
+}
+.text-white{
+    color: #fff !important;
+}
+.text-gray{
+    color: #636e72;
+}
+.text--hover:hover{
+    opacity: 0.5;
+}
+/* Css for header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0 4rem;
+    box-shadow: 0 0 3px rgba(170, 167, 167, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+}
+.header__logo{
+    align-self: center;
+    width: 5rem;
+    height: 4rem;
+}
+.header__logo img{
+    width: 100%;
+}
+.navbar{
+    list-style-type: none;
+}
+.navbar li{
+    display: inline-block;
+    padding: 0 2rem;
+    line-height: calc(5rem - 3.5px);
+}
+.navbar li:hover{
+    border-bottom: 3.5px solid #000;
+}
+.navbar li a{
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+.header__search-buy{
+    display: flex;
+}
+.header__search-buy a{
+    display: inline-block;
+    padding: 1rem;
+    max-height: 3rem;
+    align-self: center;
+    border-radius: 3px;
+}
+.header__search-buy a i{
+    max-height: 3rem;
+}
+.header__search-buy a:hover{
+    background-color: #ecf0f1;
+}
+
+/* CSS for Slider */
+.slider{
+    margin-top: 5rem;
+    position: relative;
+}
+.slider img{
+    width: 100%;
+}
+.slider p{
+    background-color: #c1272d;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem;
+    margin: 0 46% 0 47%;
+    position: absolute;
+    bottom: 2rem;
+}
+
+/* Css for banner */
+.banner{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.banner__for-him,
+.banner__for-her{
+    width: 49.5%;
+    background-color: #000;
+}
+.banner__for-him img,
+.banner__for-her img{
+    width: 100%;
+    height: 100%;
+}
+.banner__for-him img:hover,
+.banner__for-her img:hover{
+    opacity: 0.5;
+}
+
+/* CSS for what new */
+.what-new{
+    margin: 4rem 0;
+    font-weight: bold;
+}
+.main-title{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+.main-title--hover:hover{
+    opacity: 0.5;
+}
+.gender{
+    text-align: center;
+    margin: 2rem 0;
+}
+.gender li{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    position: relative;
+    border-bottom: 3.5px solid #fff;
+}
+.gender li:hover{
+    border-bottom: 3.5px solid #000;
+}
+.gender li:hover .gender__circle{
+    display: block;
+}
+.gender__circle{
+    width: 5px;
+    height: 5px;
+    background-color: #c1272d;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+/* Css for story */
+.story{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 8%;
+}
+.story-item{
+    width: 46%;
+    margin-bottom: 4rem;
+}
+.story-item:hover p{
+    opacity: 0.5;
+}
+.story-img img{
+    width: 100%;
+}
+.text-info{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Css for footer */
+.footer{
+    background-color: #f7f7f7;
+    padding: 0 5% 1rem 5%;
+}
+.footer a, .footer p{
+    color: #808080;
+    line-height: 2rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.footer img{
+    width: 18rem;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.contact__policy{
+    display: flex;
+}
+.contact__policy ul{
+    list-style-type: none;
+    margin-left: 2rem;
+}
+.info{
+    display: flex;
+}
+.info__text{
+    flex: 1;
+}
+.info__text p{
+    text-align: justify;
+}
+.info__icon{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.info__icon i{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    height: 1.5rem;
+    align-self: center;
+}
+.info__icon a{
+    display: flex;
+}
+.end{
+    display: flex;
+    margin-top: 6rem;
+    justify-content: space-between;
+}
+.end h4{
+    color: #808080;
+}
+.app{
+    display: flex;
+}
+.app i{
+    font-size: 1.5rem;
+    color: #808080;
+    margin-right: 1rem;
+}
+.app p{
+    display: inline-block;
+    line-height: 1.5rem;
+}
+.info__icon,
+.end h4,
+.app i,
+.app p{
+    opacity: 0.7;
+}
