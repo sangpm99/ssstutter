@@ -20,10 +20,19 @@ a{
     color: #fff !important;
 }
 .text-gray{
-    color: #636e72;
+    color: #636e72 !important;
 }
 .text--hover:hover{
-    opacity: 0.5;
+    opacity: 0.5 !important;
+}
+.hv-opacity-1:hover{
+    opacity: 1 !important;
+}
+.font-bold{
+    font-weight: bold !important;
+}
+.bg-white{
+    background-color: #fff !important;
 }
 /* Css for header*/
 .header{
@@ -55,8 +64,18 @@ a{
     padding: 0 2rem;
     line-height: calc(5rem - 3.5px);
 }
-.navbar li:hover{
+
+.navbar li:after{
+    display: block;
+    content: '';
+    margin: 0 -1rem;
     border-bottom: 3.5px solid #000;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%;
+}
+.navbar li:hover:after{
+    transform: scaleX(1);
 }
 .navbar li a{
     color: #000;
@@ -79,7 +98,6 @@ a{
 .header__search-buy a:hover{
     background-color: #ecf0f1;
 }
-
 /* CSS for Slider */
 .slider{
     margin-top: 5rem;
@@ -87,17 +105,38 @@ a{
 }
 .slider img{
     width: 100%;
+    z-index: 1;
 }
-.slider p{
+.slider-box{
+    position: relative;
+    display: none;
+    
+}
+.slider-box p{
+    position: absolute;
     background-color: #c1272d;
     color: #fff;
     text-align: center;
-    padding: 0.8rem;
-    margin: 0 46% 0 47%;
-    position: absolute;
+    padding: 0.5rem;
+    z-index: 2;
     bottom: 2rem;
+    width: 6%;
+    margin: 0 47%;
 }
-
+.prev,
+.next{
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 2rem;
+    cursor: pointer;
+    color: #fff;
+    overflow: hidden;
+}
+.next{
+    right:0;
+}
 /* Css for banner */
 .banner{
     margin-top: 1rem;
@@ -142,11 +181,24 @@ a{
     position: relative;
     border-bottom: 3.5px solid #fff;
 }
-.gender li:hover{
+.gender li:after{
+    display: block;
+    content: '';
+    margin: 1rem -1rem;
     border-bottom: 3.5px solid #000;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%;
+}
+/* .gender li:hover{
+    border-bottom: 3.5px solid #000;
+} */
+.gender li:hover:after{
+    transform: scaleX(1);
 }
 .gender li:hover .gender__circle{
     display: block;
+    animation: fadeOut ease-in-out 0.5s;
 }
 .gender__circle{
     width: 5px;
@@ -158,7 +210,112 @@ a{
     right: 0;
     display: none;
 }
+@keyframes fadeOut {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+ }
+/* .wn-product{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+}
+.wn-product-box{
+    width: 18rem;
+    background-color: #000;
+    height: 60vh;
+}
+.wn-img{
+    height: 80%;
+}
+.wn-product-box img{
+    width: 100%;
+    height: 100%;
+}
+.wn-product-box img:hover{
+    opacity: 0.9;
+}
+.wn-info{
+    height: 20%;
+    background-color: #fff;
+    padding: 1rem;
+}
+.wn-product-box h5{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+.wn-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem 2rem 2rem;
+}
+.wn-price p{
+    font-weight: bold;
+}
+.wn-p1{
+    color: #aeaeae;
+    text-decoration:line-through;
+} */
+/* Css for style pick */
+.style-pick{
+    background-color: #abbabf;
+}
 
+/* Css for weekly best */
+.weekly-best{
+    margin: 2rem 0 8rem 0;
+}
+.product{
+    margin: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product-box{
+    width: 24%;
+    background-color: #000;
+    height: 60vh;
+}
+.img{
+    height: 80%;
+}
+.product-box img{
+    width: 100%;
+    height: 100%;
+}
+.product-box img:hover{
+    opacity: 0.9;
+}
+.pd-info{
+    height: 20%;
+    background-color: #fff;
+    padding: 1rem;
+}
+.product-box h5{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem 2rem 2rem;
+}
+.price p{
+    font-weight: bold;
+}
+.p1{
+    color: #aeaeae;
+    text-decoration:line-through;
+}
 /* Css for story */
 .story{
     display: flex;
